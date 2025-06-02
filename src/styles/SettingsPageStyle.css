@@ -1,0 +1,7 @@
+:root[data-theme='dark'] .settings-main,
+:root[data-theme='dark'] .settings-card {
+  background: var(--color-bg-alt) !important;
+  color: #f7fafd !important;
+  border-color: var(--color-border) !important;
+  box-shadow: 0 2px 12px #0008 !important;
+} 

@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.fab {
+  position: fixed;
+  right: 2.2rem;
+  bottom: 5.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-accent, #7f4f24);
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: 900;
+  border: none;
+  box-shadow: 0 4px 24px #00000033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s, transform 0.13s;
+}
+.fab:active {
+  background: var(--color-accent-light, #b6ad90);
+  color: #23242a;
+  transform: scale(0.97);
+}
+.fab-quickadd {
+  bottom: 5.5rem;
+  right: 2.2rem;
+}
+.fab-ai {
+  bottom: 11rem;
+  right: 2.2rem;
+}
+@media (max-width: 600px) {
+  .fab {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    right: 1.1rem;
+  }
+  .fab-quickadd {
+    bottom: 4.2rem;
+  }
+  .fab-ai {
+    bottom: 8.2rem;
+  }
+}

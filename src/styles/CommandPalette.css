@@ -1,0 +1,118 @@
+.cmdp-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 32, 38, 0.25);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInCmdP 0.18s;
+}
+@keyframes fadeInCmdP {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.cmdp-modal {
+  background: rgba(36, 37, 42, 0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #00000044;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  min-width: 320px;
+  max-width: 98vw;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  animation: slideInCmdP 0.22s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideInCmdP {
+  from { transform: translateY(30px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+.cmdp-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #23242a;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-border, #e3e6ea);
+  padding: 0.2rem 0.7rem;
+}
+.cmdp-search-icon {
+  color: #b6ad90;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.cmdp-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.1rem;
+  flex: 1;
+  padding: 0.7rem 0;
+}
+.cmdp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.cmdp-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.05rem;
+  transition: background 0.14s, color 0.14s;
+}
+.cmdp-item.selected, .cmdp-item:hover, .cmdp-item:focus {
+  background: var(--color-accent);
+  color: #fff;
+}
+.cmdp-item:active {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.cmdp-icon {
+  font-size: 1.2rem;
+  color: #b6ad90;
+}
+.cmdp-empty {
+  color: #b6ad90;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+.cmdp-shortcut {
+  margin-left: auto;
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  border-radius: 6px;
+  font-size: 0.92em;
+  font-weight: 700;
+  padding: 2px 8px;
+  min-width: 24px;
+  text-align: center;
+  margin-right: 0.2rem;
+  display: inline-block;
+}
+@media (max-width: 600px) {
+  .cmdp-modal {
+    min-width: 0;
+    width: 98vw;
+    padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+  }
+  .cmdp-item {
+    min-height: 44px;
+    font-size: 1rem;
+    touch-action: manipulation;
+  }
+  .cmdp-shortcut {
+    font-size: 0.85em;
+    padding: 2px 6px;
+    min-width: 18px;
+  }
+} 

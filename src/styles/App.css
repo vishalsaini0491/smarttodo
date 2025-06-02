@@ -1,0 +1,29 @@
+.fab {
+  background: var(--color-accent);
+  color: #fff;
+  transition: background 0.16s, color 0.16s, transform 0.13s;
+  touch-action: manipulation;
+}
+.fab:active {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  transform: scale(0.97);
+}
+.fab-quickadd {
+  bottom: 2.2rem;
+  right: 2.2rem;
+  box-shadow: 0 0 24px 8px #1da1f2cc, 0 4px 24px #00000033;
+}
+.fab-ai {
+  bottom: 4.2rem;
+  right: 2.2rem;
+  box-shadow: 0 0 24px 8px #1da1f2cc, 0 4px 24px #00000033;
+}
+@media (max-width: 600px) {
+  .fab-quickadd {
+    bottom: 1.2rem;
+  }
+  .fab-ai {
+    bottom: 2.7rem;
+  }
+} 
